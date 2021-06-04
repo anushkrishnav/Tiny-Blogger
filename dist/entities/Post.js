@@ -19,10 +19,10 @@ let Post = class Post {
     }
 };
 __decorate([
-    type_graphql_1.Field(() => String),
+    type_graphql_1.Field(() => type_graphql_1.Int),
     core_1.PrimaryKey(),
-    __metadata("design:type", String)
-], Post.prototype, "_id", void 0);
+    __metadata("design:type", Number)
+], Post.prototype, "post_id", void 0);
 __decorate([
     type_graphql_1.Field(() => String),
     core_1.Property({ type: "date", default: 'NOW()' }),
@@ -34,7 +34,7 @@ __decorate([
     __metadata("design:type", Object)
 ], Post.prototype, "updatedAt", void 0);
 __decorate([
-    type_graphql_1.Field(() => String),
+    type_graphql_1.Field(),
     core_1.Property({ type: "text" }),
     __metadata("design:type", String)
 ], Post.prototype, "title", void 0);

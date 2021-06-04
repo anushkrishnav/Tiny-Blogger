@@ -4,9 +4,9 @@ import { Field, Int, ObjectType } from "type-graphql";
 @ObjectType()
 @Entity()
 export class Post {
-  @Field(() => String)
+  @Field(() => Int)
   @PrimaryKey()
-  _id! : string;
+  post_id! : number;
   
   @Field(() => String)
   @Property({type: "date", default: 'NOW()'})
@@ -16,7 +16,7 @@ export class Post {
   @Property({ type: "date", onUpdate: () => new Date()})
   updatedAt = new Date();
 
-  @Field(() => String)
+  @Field()
   @Property({type: "text"})
   title! : string;
 
